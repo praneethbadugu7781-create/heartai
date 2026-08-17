@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-primary: #E11D48;
+    --color-brand-dark: #BE123C;
+    --color-surface-bg: #FAFAF9;
+    --color-surface-card: #FFFFFF;
+    --color-text-main: #0F172A;
+    --color-text-muted: #64748B;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+    background-color: #FAFAF9;
+    color: #334155;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom Smooth Scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+@layer utilities {
+  /* Subtle medical background pattern */
+  .bg-medical-grid {
+    background-image: radial-gradient(rgba(225, 29, 72, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+}
+
+/* Custom range input slider */
+input[type="range"] {
+  accent-color: #E11D48;
+}
+
+/* Print Styles for Assessment Report */
+@media print {
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

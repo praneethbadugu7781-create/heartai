@@ -1,0 +1,229 @@
+{
+  "5524ea31-5c85-486e-9cb2-9d02fcf00655": {
+    "id": "5524ea31-5c85-486e-9cb2-9d02fcf00655",
+    "created_at": "2026-08-17T15:48:28.343528",
+    "user_id": null,
+    "patient_name": "Personal Health Profile",
+    "notes": null,
+    "health_data": {
+      "age": 20,
+      "sex": 1,
+      "cp": 1,
+      "trestbps": 132,
+      "chol": 228,
+      "fbs": 0,
+      "restecg": 0,
+      "thalach": 154,
+      "exang": 0,
+      "oldpeak": 0.8,
+      "slope": 1,
+      "ca": 0,
+      "thal": 2
+    },
+    "dnn_probability": 0.969549834728241,
+    "mlp_probability": 0.9490757584571838,
+    "tabnet_probability": 0.99,
+    "ensemble_probability": 0.9706,
+    "risk_percentage": 97.1,
+    "risk_category": "Higher Estimated Risk",
+    "risk_level_severity": "high",
+    "model_agreement": "High Consensus",
+    "top_factors": [
+      {
+        "feature": "age",
+        "feature_name": "Age",
+        "value": 20,
+        "display_value": "20 years",
+        "importance_score": 0.2644,
+        "direction": "protective",
+        "clinical_insight": "Age (20 years) is associated with lower baseline vascular wear."
+      },
+      {
+        "feature": "thal",
+        "feature_name": "Thalassemia Blood Flow",
+        "value": 2,
+        "display_value": "Fixed Defect",
+        "importance_score": 0.1447,
+        "direction": "elevates_risk",
+        "clinical_insight": "Fixed perfusion defect noted on cardiac nuclear imaging."
+      },
+      {
+        "feature": "thalach",
+        "feature_name": "Maximum Heart Rate",
+        "value": 154,
+        "display_value": "154 bpm",
+        "importance_score": 0.1328,
+        "direction": "protective",
+        "clinical_insight": "Maximum heart rate (154 bpm) indicates robust cardiovascular exercise tolerance."
+      },
+      {
+        "feature": "sex",
+        "feature_name": "Biological Sex",
+        "value": 1,
+        "display_value": "Male",
+        "importance_score": 0.113,
+        "direction": "elevates_risk",
+        "clinical_insight": "Biological Sex measured at 1."
+      },
+      {
+        "feature": "fbs",
+        "feature_name": "Fasting Blood Sugar",
+        "value": 0,
+        "display_value": "\u2264 120 mg/dL (Normal)",
+        "importance_score": 0.083,
+        "direction": "elevates_risk",
+        "clinical_insight": "Fasting Blood Sugar measured at 0."
+      },
+      {
+        "feature": "trestbps",
+        "feature_name": "Resting Blood Pressure",
+        "value": 132,
+        "display_value": "132 mmHg",
+        "importance_score": 0.0665,
+        "direction": "elevates_risk",
+        "clinical_insight": "Resting blood pressure (132 mmHg) is elevated above the ideal < 120 mmHg threshold."
+      },
+      {
+        "feature": "cp",
+        "feature_name": "Chest Pain Type",
+        "value": 1,
+        "display_value": "Atypical Angina",
+        "importance_score": 0.0469,
+        "direction": "protective",
+        "clinical_insight": "Chest discomfort pattern is atypical or non-anginal in clinical presentation."
+      },
+      {
+        "feature": "ca",
+        "feature_name": "Major Coronary Vessels",
+        "value": 0,
+        "display_value": "0 Major Vessels",
+        "importance_score": 0.0396,
+        "direction": "protective",
+        "clinical_insight": "Zero major coronary vessel obstructions identified on fluoroscopy."
+      },
+      {
+        "feature": "slope",
+        "feature_name": "ST Segment Slope",
+        "value": 1,
+        "display_value": "Flat",
+        "importance_score": 0.0338,
+        "direction": "elevates_risk",
+        "clinical_insight": "Flat ST slope at peak exercise suggests impaired exercise repolarization."
+      },
+      {
+        "feature": "oldpeak",
+        "feature_name": "ST Depression (Exercise)",
+        "value": 0.8,
+        "display_value": "0.8 mm",
+        "importance_score": 0.0331,
+        "direction": "elevates_risk",
+        "clinical_insight": "Mild ST segment depression (0.8 mm) noted during peak stress testing."
+      },
+      {
+        "feature": "chol",
+        "feature_name": "Serum Cholesterol",
+        "value": 228,
+        "display_value": "228 mg/dL",
+        "importance_score": 0.0283,
+        "direction": "elevates_risk",
+        "clinical_insight": "Serum cholesterol (228 mg/dL) is borderline elevated."
+      },
+      {
+        "feature": "restecg",
+        "feature_name": "Resting Electrocardiogram",
+        "value": 0,
+        "display_value": "Normal",
+        "importance_score": 0.0101,
+        "direction": "protective",
+        "clinical_insight": "Normal resting baseline electrocardiogram rhythm."
+      },
+      {
+        "feature": "exang",
+        "feature_name": "Exercise Induced Angina",
+        "value": 0,
+        "display_value": "No",
+        "importance_score": 0.0037,
+        "direction": "protective",
+        "clinical_insight": "No exercise-induced angina reported during exertion."
+      }
+    ],
+    "recommendations": [
+      {
+        "category": "Nutrition",
+        "title": "Cardioprotective Dietary Principles",
+        "summary": "Evidence-based nutritional approaches emphasizing whole foods, plant sterols, and healthy unsaturated fats.",
+        "actionable_points": [
+          "Emphasize a Mediterranean or DASH-style eating pattern rich in leafy vegetables, berries, and whole grains.",
+          "With serum cholesterol at 228 mg/dL, increase soluble fiber (oats, flaxseeds, psyllium) to assist natural LDL binding.",
+          "Prioritize lean proteins such as legumes, wild-caught fish rich in Omega-3 fatty acids, and skinless poultry.",
+          "Limit processed foods with high sodium (< 2,300 mg/day baseline, < 1,500 mg/day for elevated blood pressure)."
+        ],
+        "priority": "standard",
+        "icon": "Utensils"
+      },
+      {
+        "category": "Physical Activity",
+        "title": "Heart-Healthy Movement & Aerobic Conditioning",
+        "summary": "Gradual, sustainable physical activity designed to improve vascular elasticity and endurance safely.",
+        "actionable_points": [
+          "Target a minimum of 150 minutes of moderate-intensity aerobic exercise (such as brisk walking, cycling, or swimming) per week.",
+          "Incorporate 2 non-consecutive days of light-to-moderate resistance or functional mobility training.",
+          "Avoid abrupt heavy exertion without adequate 5-10 minute cardiovascular warm-up and cool-down phases."
+        ],
+        "priority": "standard",
+        "icon": "Activity"
+      },
+      {
+        "category": "Sleep",
+        "title": "Circadian Health & Nighttime Recovery",
+        "summary": "Quality sleep allows nocturnal blood pressure dipping and essential parasympathetic cardiovascular recovery.",
+        "actionable_points": [
+          "Maintain 7 to 9 hours of restorative sleep per night with a regular sleep and wake schedule.",
+          "Keep the sleep environment cool (65-68\u00b0F / 18-20\u00b0C), quiet, and free from blue-light screens 60 minutes before bed.",
+          "If frequent snoring, morning fatigue, or nighttime awakenings occur, discuss an evaluation for sleep-disordered breathing with a clinician."
+        ],
+        "priority": "medium",
+        "icon": "Moon"
+      },
+      {
+        "category": "Stress Management",
+        "title": "Autonomic Regulation & Stress Reduction",
+        "summary": "Chronic sympathetic activation elevates cortisol and blood pressure. Intentional down-regulation promotes arterial health.",
+        "actionable_points": [
+          "Practice diaphragmatic resonance breathing (e.g., 4 seconds inhale, 4 seconds hold, 4 seconds exhale) for 5 minutes twice daily.",
+          "Take scheduled 10-minute micro-breaks during high-pressure work periods to reset sympathetic nervous system tone.",
+          "Incorporate gentle mindful meditation, nature walks, or listening to calming music to support heart rate variability (HRV)."
+        ],
+        "priority": "medium",
+        "icon": "Sparkles"
+      },
+      {
+        "category": "Monitoring & Biometrics",
+        "title": "Proactive Health Tracking & Record Keeping",
+        "summary": "Regular non-invasive biomarker monitoring provides actionable clinical trends rather than isolated snapshot readings.",
+        "actionable_points": [
+          "With resting BP at 132 mmHg, maintain a 14-day blood pressure diary before your next doctor visit.",
+          "Record resting blood pressure at the same time daily (morning and evening) using a validated upper-arm cuff.",
+          "Schedule annual or bi-annual comprehensive metabolic and lipid panels with your primary care provider.",
+          "Keep an organized log of resting vitals, exertion tolerance, and any noticeable sensations to share during checkups."
+        ],
+        "priority": "standard",
+        "icon": "LineChart"
+      },
+      {
+        "category": "Professional Care",
+        "title": "Healthcare Provider Collaboration",
+        "summary": "Algorithmic assessments serve as health awareness tools. Professional clinical care remains the cornerstone of heart health.",
+        "actionable_points": [
+          "Given the higher model-estimated risk profile, an in-person clinical evaluation with a cardiologist is strongly advised.",
+          "Schedule a routine review with a primary care doctor or cardiologist to discuss these estimated AI risk factors.",
+          "Share your family history, dietary habits, and recent lifestyle changes openly with your healthcare team.",
+          "Seek immediate emergency medical attention if you ever experience sudden chest pain, pressure radiating to the arm/jaw, severe shortness of breath, or syncope."
+        ],
+        "priority": "high",
+        "icon": "ShieldAlert"
+      }
+    ],
+    "disclaimer": "Medical Disclaimer: HeartGuard AI is an educational machine learning assessment tool. Predictions represent algorithmic risk estimations based on clinical trial datasets and do NOT constitute a medical diagnosis, clinical confirmation, or treatment plan. Always consult a qualified healthcare provider."
+  }
+}

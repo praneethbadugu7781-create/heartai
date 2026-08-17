@@ -1,0 +1,1032 @@
+{
+  "generated_at": "2026-08-17 15:35:23 UTC",
+  "dataset_stats": {
+    "dataset_name": "Kaggle / UCI Cleveland Heart Disease Dataset",
+    "total_samples": 1025,
+    "unique_patients": 303,
+    "feature_count": 13,
+    "positive_class_count": 547,
+    "negative_class_count": 478,
+    "train_samples": 717,
+    "val_samples": 154,
+    "test_samples": 154,
+    "split_strategy": "Stratified 70% Train / 15% Validation / 15% Independent Test"
+  },
+  "metrics_summary": [
+    {
+      "accuracy": 0.8571,
+      "precision": 0.8947,
+      "recall_sensitivity": 0.8293,
+      "specificity": 0.8889,
+      "f1_score": 0.8608,
+      "roc_auc": 0.9363,
+      "log_loss": 0.3194,
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 14,
+      "true_positive": 68,
+      "total_samples": 154,
+      "model_key": "dnn",
+      "model_name": "Deep Neural Network",
+      "architecture": "Dense 4-Layer Network with BatchNorm & Dropout",
+      "training_time_seconds": 4.68,
+      "epoch_count": 120
+    },
+    {
+      "accuracy": 0.8312,
+      "precision": 0.859,
+      "recall_sensitivity": 0.8171,
+      "specificity": 0.8472,
+      "f1_score": 0.8375,
+      "roc_auc": 0.9219,
+      "log_loss": 0.354,
+      "true_negative": 61,
+      "false_positive": 11,
+      "false_negative": 15,
+      "true_positive": 67,
+      "total_samples": 154,
+      "model_key": "mlp",
+      "model_name": "Multi-Layer Perceptron",
+      "architecture": "Compact 2-Layer Baseline with LeakyReLU & Weight Decay",
+      "training_time_seconds": 2.33,
+      "epoch_count": 120
+    },
+    {
+      "accuracy": 0.8377,
+      "precision": 0.8904,
+      "recall_sensitivity": 0.7927,
+      "specificity": 0.8889,
+      "f1_score": 0.8387,
+      "roc_auc": 0.916,
+      "log_loss": 0.3638,
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 17,
+      "true_positive": 65,
+      "total_samples": 154,
+      "model_key": "tabnet",
+      "model_name": "TabNet Attention Model",
+      "architecture": "Sequential Multi-Step Attentive Feature Selection",
+      "training_time_seconds": 14.57,
+      "epoch_count": 120
+    },
+    {
+      "accuracy": 0.8442,
+      "precision": 0.8919,
+      "recall_sensitivity": 0.8049,
+      "specificity": 0.8889,
+      "f1_score": 0.8462,
+      "roc_auc": 0.9339,
+      "log_loss": 0.3319,
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 16,
+      "true_positive": 66,
+      "total_samples": 154,
+      "model_key": "ensemble",
+      "model_name": "HeartGuard Calibrated Ensemble",
+      "architecture": "Weighted Ensemble (35% DNN + 30% MLP + 35% TabNet)",
+      "training_time_seconds": 21.58,
+      "epoch_count": 120
+    }
+  ],
+  "roc_curves": [
+    {
+      "model_key": "dnn",
+      "model_name": "DNN",
+      "auc": 0.9363,
+      "points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0,
+          "threshold": 1.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.0122,
+          "threshold": 0.999
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.2805,
+          "threshold": 0.9725
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.2805,
+          "threshold": 0.9724
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.6463,
+          "threshold": 0.8565
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.6463,
+          "threshold": 0.8452
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.7683,
+          "threshold": 0.6991
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.7683,
+          "threshold": 0.6705
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.7805,
+          "threshold": 0.6625
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7805,
+          "threshold": 0.6016
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7927,
+          "threshold": 0.589
+        },
+        {
+          "fpr": 0.0972,
+          "tpr": 0.7927,
+          "threshold": 0.5712
+        },
+        {
+          "fpr": 0.0972,
+          "tpr": 0.8049,
+          "threshold": 0.5505
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.8049,
+          "threshold": 0.5236
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.8415,
+          "threshold": 0.4919
+        },
+        {
+          "fpr": 0.1389,
+          "tpr": 0.8415,
+          "threshold": 0.4583
+        },
+        {
+          "fpr": 0.1389,
+          "tpr": 0.878,
+          "threshold": 0.4185
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.878,
+          "threshold": 0.3937
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.9024,
+          "threshold": 0.3779
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.9024,
+          "threshold": 0.3298
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.9146,
+          "threshold": 0.326
+        },
+        {
+          "fpr": 0.3472,
+          "tpr": 0.9146,
+          "threshold": 0.2831
+        },
+        {
+          "fpr": 0.3472,
+          "tpr": 0.9268,
+          "threshold": 0.2686
+        },
+        {
+          "fpr": 0.375,
+          "tpr": 0.9268,
+          "threshold": 0.2514
+        },
+        {
+          "fpr": 0.375,
+          "tpr": 0.939,
+          "threshold": 0.2499
+        },
+        {
+          "fpr": 0.4167,
+          "tpr": 0.939,
+          "threshold": 0.2296
+        },
+        {
+          "fpr": 0.4167,
+          "tpr": 0.9878,
+          "threshold": 0.2035
+        },
+        {
+          "fpr": 0.5972,
+          "tpr": 0.9878,
+          "threshold": 0.1506
+        },
+        {
+          "fpr": 0.5972,
+          "tpr": 1.0,
+          "threshold": 0.1491
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0,
+          "threshold": 0.0054
+        }
+      ]
+    },
+    {
+      "model_key": "mlp",
+      "model_name": "MLP",
+      "auc": 0.9219,
+      "points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0,
+          "threshold": 1.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.0122,
+          "threshold": 0.9998
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.0854,
+          "threshold": 0.9923
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.0854,
+          "threshold": 0.9895
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.5122,
+          "threshold": 0.9024
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.5122,
+          "threshold": 0.8947
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.5366,
+          "threshold": 0.8768
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.5366,
+          "threshold": 0.8695
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.7561,
+          "threshold": 0.7044
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.7561,
+          "threshold": 0.7018
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.7683,
+          "threshold": 0.689
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7683,
+          "threshold": 0.6646
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7805,
+          "threshold": 0.6564
+        },
+        {
+          "fpr": 0.0833,
+          "tpr": 0.7805,
+          "threshold": 0.5943
+        },
+        {
+          "fpr": 0.0833,
+          "tpr": 0.7927,
+          "threshold": 0.5626
+        },
+        {
+          "fpr": 0.125,
+          "tpr": 0.7927,
+          "threshold": 0.5194
+        },
+        {
+          "fpr": 0.125,
+          "tpr": 0.8049,
+          "threshold": 0.5144
+        },
+        {
+          "fpr": 0.1528,
+          "tpr": 0.8049,
+          "threshold": 0.5048
+        },
+        {
+          "fpr": 0.1528,
+          "tpr": 0.8171,
+          "threshold": 0.5033
+        },
+        {
+          "fpr": 0.1667,
+          "tpr": 0.8171,
+          "threshold": 0.4988
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.8415,
+          "threshold": 0.4552
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.8659,
+          "threshold": 0.432
+        },
+        {
+          "fpr": 0.1944,
+          "tpr": 0.8659,
+          "threshold": 0.4283
+        },
+        {
+          "fpr": 0.1944,
+          "tpr": 0.878,
+          "threshold": 0.4185
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.878,
+          "threshold": 0.3841
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.8902,
+          "threshold": 0.3792
+        },
+        {
+          "fpr": 0.25,
+          "tpr": 0.8902,
+          "threshold": 0.378
+        },
+        {
+          "fpr": 0.25,
+          "tpr": 0.9024,
+          "threshold": 0.3686
+        },
+        {
+          "fpr": 0.2778,
+          "tpr": 0.9024,
+          "threshold": 0.3448
+        },
+        {
+          "fpr": 0.2778,
+          "tpr": 0.9146,
+          "threshold": 0.3378
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.9146,
+          "threshold": 0.3331
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.9512,
+          "threshold": 0.3073
+        },
+        {
+          "fpr": 0.3333,
+          "tpr": 0.9512,
+          "threshold": 0.2979
+        },
+        {
+          "fpr": 0.3333,
+          "tpr": 0.9634,
+          "threshold": 0.2878
+        },
+        {
+          "fpr": 0.4306,
+          "tpr": 0.9634,
+          "threshold": 0.2427
+        },
+        {
+          "fpr": 0.4306,
+          "tpr": 0.9756,
+          "threshold": 0.242
+        },
+        {
+          "fpr": 0.5417,
+          "tpr": 0.9756,
+          "threshold": 0.1786
+        },
+        {
+          "fpr": 0.5417,
+          "tpr": 0.9878,
+          "threshold": 0.1728
+        },
+        {
+          "fpr": 0.75,
+          "tpr": 0.9878,
+          "threshold": 0.0782
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0,
+          "threshold": 0.0011
+        }
+      ]
+    },
+    {
+      "model_key": "tabnet",
+      "model_name": "TabNet",
+      "auc": 0.916,
+      "points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0,
+          "threshold": 1.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.0122,
+          "threshold": 1.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.3293,
+          "threshold": 0.9325
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.3293,
+          "threshold": 0.9302
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.6463,
+          "threshold": 0.7999
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.6463,
+          "threshold": 0.796
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.6585,
+          "threshold": 0.7626
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.6585,
+          "threshold": 0.7496
+        },
+        {
+          "fpr": 0.0417,
+          "tpr": 0.6829,
+          "threshold": 0.7238
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.6829,
+          "threshold": 0.6889
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.7317,
+          "threshold": 0.6365
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7317,
+          "threshold": 0.6363
+        },
+        {
+          "fpr": 0.0694,
+          "tpr": 0.7439,
+          "threshold": 0.627
+        },
+        {
+          "fpr": 0.0833,
+          "tpr": 0.7439,
+          "threshold": 0.618
+        },
+        {
+          "fpr": 0.0833,
+          "tpr": 0.7561,
+          "threshold": 0.6016
+        },
+        {
+          "fpr": 0.0972,
+          "tpr": 0.7561,
+          "threshold": 0.5602
+        },
+        {
+          "fpr": 0.0972,
+          "tpr": 0.7683,
+          "threshold": 0.5431
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.7683,
+          "threshold": 0.542
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.7927,
+          "threshold": 0.5117
+        },
+        {
+          "fpr": 0.1667,
+          "tpr": 0.7927,
+          "threshold": 0.4614
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.8049,
+          "threshold": 0.4592
+        },
+        {
+          "fpr": 0.1806,
+          "tpr": 0.8171,
+          "threshold": 0.4564
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.8171,
+          "threshold": 0.4336
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.8293,
+          "threshold": 0.4202
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.8293,
+          "threshold": 0.4199
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.8537,
+          "threshold": 0.4114
+        },
+        {
+          "fpr": 0.2639,
+          "tpr": 0.8537,
+          "threshold": 0.4088
+        },
+        {
+          "fpr": 0.2639,
+          "tpr": 0.8659,
+          "threshold": 0.4041
+        },
+        {
+          "fpr": 0.2917,
+          "tpr": 0.8659,
+          "threshold": 0.4004
+        },
+        {
+          "fpr": 0.2917,
+          "tpr": 0.878,
+          "threshold": 0.3937
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.878,
+          "threshold": 0.3928
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.8902,
+          "threshold": 0.38
+        },
+        {
+          "fpr": 0.3194,
+          "tpr": 0.8902,
+          "threshold": 0.3767
+        },
+        {
+          "fpr": 0.3194,
+          "tpr": 0.9024,
+          "threshold": 0.3765
+        },
+        {
+          "fpr": 0.3333,
+          "tpr": 0.9024,
+          "threshold": 0.3743
+        },
+        {
+          "fpr": 0.3333,
+          "tpr": 0.9146,
+          "threshold": 0.3682
+        },
+        {
+          "fpr": 0.4444,
+          "tpr": 0.9146,
+          "threshold": 0.3168
+        },
+        {
+          "fpr": 0.4444,
+          "tpr": 0.9878,
+          "threshold": 0.2753
+        },
+        {
+          "fpr": 0.5,
+          "tpr": 0.9878,
+          "threshold": 0.2431
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0,
+          "threshold": 0.0024
+        }
+      ]
+    },
+    {
+      "model_key": "ensemble",
+      "model_name": "Ensemble",
+      "auc": 0.9339,
+      "points": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0,
+          "threshold": 1.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.0122,
+          "threshold": 0.9996
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.2439,
+          "threshold": 0.9644
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.2439,
+          "threshold": 0.9628
+        },
+        {
+          "fpr": 0.0139,
+          "tpr": 0.7317,
+          "threshold": 0.7083
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.7317,
+          "threshold": 0.7074
+        },
+        {
+          "fpr": 0.0278,
+          "tpr": 0.7805,
+          "threshold": 0.6739
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.7805,
+          "threshold": 0.6374
+        },
+        {
+          "fpr": 0.0556,
+          "tpr": 0.7927,
+          "threshold": 0.6268
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.7927,
+          "threshold": 0.5199
+        },
+        {
+          "fpr": 0.1111,
+          "tpr": 0.8171,
+          "threshold": 0.4789
+        },
+        {
+          "fpr": 0.1528,
+          "tpr": 0.8171,
+          "threshold": 0.4633
+        },
+        {
+          "fpr": 0.1528,
+          "tpr": 0.8415,
+          "threshold": 0.4443
+        },
+        {
+          "fpr": 0.1667,
+          "tpr": 0.8415,
+          "threshold": 0.438
+        },
+        {
+          "fpr": 0.1667,
+          "tpr": 0.8537,
+          "threshold": 0.4362
+        },
+        {
+          "fpr": 0.2083,
+          "tpr": 0.8537,
+          "threshold": 0.384
+        },
+        {
+          "fpr": 0.2083,
+          "tpr": 0.8659,
+          "threshold": 0.3815
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.8659,
+          "threshold": 0.3809
+        },
+        {
+          "fpr": 0.2222,
+          "tpr": 0.878,
+          "threshold": 0.374
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.878,
+          "threshold": 0.3733
+        },
+        {
+          "fpr": 0.2361,
+          "tpr": 0.8902,
+          "threshold": 0.3718
+        },
+        {
+          "fpr": 0.25,
+          "tpr": 0.8902,
+          "threshold": 0.3707
+        },
+        {
+          "fpr": 0.25,
+          "tpr": 0.9024,
+          "threshold": 0.37
+        },
+        {
+          "fpr": 0.2778,
+          "tpr": 0.9024,
+          "threshold": 0.3609
+        },
+        {
+          "fpr": 0.2778,
+          "tpr": 0.9146,
+          "threshold": 0.347
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.9146,
+          "threshold": 0.3338
+        },
+        {
+          "fpr": 0.3056,
+          "tpr": 0.9268,
+          "threshold": 0.3267
+        },
+        {
+          "fpr": 0.3194,
+          "tpr": 0.9268,
+          "threshold": 0.3253
+        },
+        {
+          "fpr": 0.3194,
+          "tpr": 0.939,
+          "threshold": 0.3206
+        },
+        {
+          "fpr": 0.3472,
+          "tpr": 0.939,
+          "threshold": 0.3023
+        },
+        {
+          "fpr": 0.3472,
+          "tpr": 0.9512,
+          "threshold": 0.3016
+        },
+        {
+          "fpr": 0.375,
+          "tpr": 0.9512,
+          "threshold": 0.2775
+        },
+        {
+          "fpr": 0.375,
+          "tpr": 0.9634,
+          "threshold": 0.2706
+        },
+        {
+          "fpr": 0.4167,
+          "tpr": 0.9634,
+          "threshold": 0.2688
+        },
+        {
+          "fpr": 0.4167,
+          "tpr": 0.9756,
+          "threshold": 0.2688
+        },
+        {
+          "fpr": 0.4722,
+          "tpr": 0.9756,
+          "threshold": 0.252
+        },
+        {
+          "fpr": 0.4722,
+          "tpr": 0.9878,
+          "threshold": 0.2499
+        },
+        {
+          "fpr": 0.5694,
+          "tpr": 0.9878,
+          "threshold": 0.1984
+        },
+        {
+          "fpr": 0.5694,
+          "tpr": 1.0,
+          "threshold": 0.1974
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0,
+          "threshold": 0.0102
+        }
+      ]
+    }
+  ],
+  "confusion_matrices": [
+    {
+      "model_key": "dnn",
+      "model_name": "Deep Neural Network",
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 14,
+      "true_positive": 68,
+      "total_test_samples": 154
+    },
+    {
+      "model_key": "mlp",
+      "model_name": "Multi-Layer Perceptron",
+      "true_negative": 61,
+      "false_positive": 11,
+      "false_negative": 15,
+      "true_positive": 67,
+      "total_test_samples": 154
+    },
+    {
+      "model_key": "tabnet",
+      "model_name": "TabNet Attention Model",
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 17,
+      "true_positive": 65,
+      "total_test_samples": 154
+    },
+    {
+      "model_key": "ensemble",
+      "model_name": "HeartGuard Calibrated Ensemble",
+      "true_negative": 64,
+      "false_positive": 8,
+      "false_negative": 16,
+      "true_positive": 66,
+      "total_test_samples": 154
+    }
+  ],
+  "feature_importances": [
+    {
+      "feature": "thal",
+      "feature_name": "Thalassemia Blood Flow",
+      "dnn_score": 0.3548,
+      "mlp_score": 0.1913,
+      "tabnet_score": 0.0688,
+      "ensemble_score": 0.2057,
+      "description": "Clinical significance of Thalassemia Blood Flow across models."
+    },
+    {
+      "feature": "thalach",
+      "feature_name": "Maximum Heart Rate",
+      "dnn_score": 0.0974,
+      "mlp_score": 0.1308,
+      "tabnet_score": 0.0859,
+      "ensemble_score": 0.1034,
+      "description": "Clinical significance of Maximum Heart Rate across models."
+    },
+    {
+      "feature": "sex",
+      "feature_name": "Biological Sex",
+      "dnn_score": 0.0742,
+      "mlp_score": 0.1166,
+      "tabnet_score": 0.0905,
+      "ensemble_score": 0.0926,
+      "description": "Clinical significance of Biological Sex across models."
+    },
+    {
+      "feature": "slope",
+      "feature_name": "ST Segment Slope",
+      "dnn_score": 0.0889,
+      "mlp_score": 0.0862,
+      "tabnet_score": 0.0764,
+      "ensemble_score": 0.0837,
+      "description": "Clinical significance of ST Segment Slope across models."
+    },
+    {
+      "feature": "age",
+      "feature_name": "Age",
+      "dnn_score": 0.0604,
+      "mlp_score": 0.0726,
+      "tabnet_score": 0.0951,
+      "ensemble_score": 0.0762,
+      "description": "Clinical significance of Age across models."
+    },
+    {
+      "feature": "oldpeak",
+      "feature_name": "ST Depression (Exercise)",
+      "dnn_score": 0.0573,
+      "mlp_score": 0.0774,
+      "tabnet_score": 0.0781,
+      "ensemble_score": 0.0706,
+      "description": "Clinical significance of ST Depression (Exercise) across models."
+    },
+    {
+      "feature": "trestbps",
+      "feature_name": "Resting Blood Pressure",
+      "dnn_score": 0.0527,
+      "mlp_score": 0.0691,
+      "tabnet_score": 0.0795,
+      "ensemble_score": 0.067,
+      "description": "Clinical significance of Resting Blood Pressure across models."
+    },
+    {
+      "feature": "cp",
+      "feature_name": "Chest Pain Type",
+      "dnn_score": 0.0422,
+      "mlp_score": 0.0591,
+      "tabnet_score": 0.0786,
+      "ensemble_score": 0.06,
+      "description": "Clinical significance of Chest Pain Type across models."
+    },
+    {
+      "feature": "exang",
+      "feature_name": "Exercise Induced Angina",
+      "dnn_score": 0.0503,
+      "mlp_score": 0.0499,
+      "tabnet_score": 0.076,
+      "ensemble_score": 0.0592,
+      "description": "Clinical significance of Exercise Induced Angina across models."
+    },
+    {
+      "feature": "restecg",
+      "feature_name": "Resting Electrocardiogram",
+      "dnn_score": 0.0312,
+      "mlp_score": 0.0617,
+      "tabnet_score": 0.0735,
+      "ensemble_score": 0.0552,
+      "description": "Clinical significance of Resting Electrocardiogram across models."
+    },
+    {
+      "feature": "ca",
+      "feature_name": "Major Coronary Vessels",
+      "dnn_score": 0.0386,
+      "mlp_score": 0.0347,
+      "tabnet_score": 0.0714,
+      "ensemble_score": 0.0489,
+      "description": "Clinical significance of Major Coronary Vessels across models."
+    },
+    {
+      "feature": "fbs",
+      "feature_name": "Fasting Blood Sugar",
+      "dnn_score": 0.0252,
+      "mlp_score": 0.0232,
+      "tabnet_score": 0.068,
+      "ensemble_score": 0.0396,
+      "description": "Clinical significance of Fasting Blood Sugar across models."
+    },
+    {
+      "feature": "chol",
+      "feature_name": "Serum Cholesterol",
+      "dnn_score": 0.0268,
+      "mlp_score": 0.0273,
+      "tabnet_score": 0.0583,
+      "ensemble_score": 0.038,
+      "description": "Clinical significance of Serum Cholesterol across models."
+    }
+  ],
+  "ensemble_strategy": "Calibrated Performance-Weighted Averaging (35% DNN + 30% MLP + 35% TabNet)",
+  "notes": "Evaluation conducted strictly on the held-out test split with zero data leakage."
+}
