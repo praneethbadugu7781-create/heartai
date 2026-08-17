@@ -59,7 +59,7 @@ app.include_router(assistant.router, prefix=settings.API_V1_STR)
 app.include_router(report.router, prefix=settings.API_V1_STR)
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {
         "service": settings.PROJECT_NAME,
@@ -68,3 +68,9 @@ def root():
         "api_v1": settings.API_V1_STR,
         "disclaimer": "Educational risk assessment only. Not a medical diagnosis."
     }
+
+
+@app.api_route("/health", methods=["GET", "HEAD"])
+def quick_health():
+    return {"status": "healthy"}
+

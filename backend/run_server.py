@@ -9,5 +9,7 @@ if backend_dir not in sys.path:
 from app.main import app
 
 if __name__ == "__main__":
-    print("Starting HeartGuard AI FastAPI Server on http://127.0.0.1:8000 ...")
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+    host = os.environ.get("HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Starting HeartGuard AI FastAPI Server on http://{host}:{port} ...")
+    uvicorn.run(app, host=host, port=port, log_level="info")
